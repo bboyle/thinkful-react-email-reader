@@ -1,8 +1,10 @@
 const React = require( 'react' );
+const Link = require( 'react-router' ).Link;
 
 
 const MailContainer = function( props ) {
-	const MAIL = require( '../constants/mail.js' )[ props.mailboxId ];
+	const MAILBOX_ID = props.mailboxId;
+	const MAIL = require( '../constants/mail.js' )[ MAILBOX_ID ];
 
 	// any mail?
 	if (! MAIL) {
@@ -11,11 +13,12 @@ const MailContainer = function( props ) {
 
 	const mailTableBody = Object.keys( MAIL ).map(function( mailId ) {
 		const mail = MAIL[ mailId ];
+		const linkTo = `${ MAILBOX_ID }/${ mail.id }`;
 		return (
 			<tr>
 				<td>{ mail.id }</td>
 				<td>{ mail.from }</td>
-				<td>{ mail.title }</td>
+				<td><Link to={ linkTo }>{ mail.title }</Link></td>
 			</tr>
 		);
 	});
