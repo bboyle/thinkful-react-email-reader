@@ -2,7 +2,7 @@ const React = require( 'react' );
 const Link = require( 'react-router' ).Link;
 
 
-const App = function() {
+const App = function( props ) {
 	const MAILBOX = require( '../constants/mailbox.js' );
 
 	// create menu
@@ -19,7 +19,7 @@ const App = function() {
 			</nav>
 
 			<main>
-				<p>TODO</p>
+				{ props.children }
 			</main>
 		</div>
 	);

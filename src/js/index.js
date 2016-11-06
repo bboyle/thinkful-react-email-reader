@@ -11,12 +11,12 @@ const MailboxContainer = require( './components/MailboxContainer' );
 const Mail = require( './components/Mail' );
 
 
+            // <IndexRoute component={ MailContainer } />
 const routes = (
 	<Router history={ router.hashHistory }>
         <Route path="/" component={ App }>
-            <IndexRoute component={ MailContainer } />
-            <Route path=":mailboxName" component={ MailboxContainer }>
-            	<Route path=":email" component={ Mail } />
+            <Route path=":mailboxId" component={ MailboxContainer }>
+            	<Route path=":emailId" component={ Mail } />
             </Route>
         </Route>
 	</Router>

@@ -5,6 +5,9 @@ module.exports = {
 	"spam": {
 		"title": "Spam"
 	},
+	"trash": {
+		"title": "Trash"
+	},
 	"drafts": {
 		"title": "Drafts"
 	},
