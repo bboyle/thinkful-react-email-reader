@@ -4,15 +4,89 @@
 	<meta charset="UTF-8">
 	<title>Email reader</title>
 	<script src="email-reader.1.1.6.js"></script>
+	<style>
+
+		body {
+			background: #212529;
+			color: #adb5bd;
+			margin: 0;
+			padding: 0;
+			font: 24px/1.5 Palatino, serif;
+			display: flex;
+			flex-flow: column;
+			height: 100vh;
+		}
+
+		:link {
+			color: #329af0;
+		}
+		:visited {
+			color: #cc5de8;
+		}
+
+		header,
+		footer {
+			padding: 1rem;
+		}
+		header > h1 {
+			margin: 0;
+		}
+
+		#app {
+			display: flex;
+			flex-flow: row;
+			flex-grow: 1;
+		}
+
+		#app > div {
+			display: flex;
+			flex-flow: row;
+			flex-grow: 1;
+		}
+		#app nav {
+			min-width: 5em;
+			max-width: 10em;
+		}
+
+		nav > ul,
+		nav > ul > li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: block;
+		}
+
+		nav a {
+			display: block;
+			padding: .3rem 1rem;
+		}
+		nav a:hover {
+			background: #343a40;
+		}
+
+		main {
+			display: block;
+			flex-grow: 1;
+			background: #343a40;
+			overflow-y: auto;
+		}
+
+	</style>
 </head>
 <body>
 
+	<header>
+		<h1>Email reader</h1>
+	</header>
+
 	<div id="app">
 		<!-- fallback content -->
-		<h1>Email reader</h1>
-
 		<p>Oops… looks like something went wrong loading this single-page application.</p>
 	</div>
+
+	<footer>
+		<small>A <a href="http://www.thinkful.com/">Thinkful</a> project by <a href="http://ultimate.benboyle.id.au/">Ben Boyle</a></small>
+	</footer>
 
 </body>
 </html>

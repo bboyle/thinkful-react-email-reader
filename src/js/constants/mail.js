@@ -1,4 +1,4 @@
-{
+modules.exports = {
 	"inbox": {
 		"0": {
 			"id": 0,
@@ -31,4 +31,4 @@
 			"content": "Theyre REELY CheEp"
 		}
 	}
-}
+};
